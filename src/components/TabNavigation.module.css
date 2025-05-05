@@ -1,0 +1,43 @@
+.tabContainer {
+  width: 100%;
+}
+
+.tabHeader {
+  display: flex;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tab {
+  padding: 0.75rem 1.25rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.tab:hover {
+  color: var(--primary-color);
+}
+
+.tab.active {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+}
+
+.tabContent {
+  padding: 1.5rem 0;
+}
+
+@media (max-width: 768px) {
+  .tabHeader {
+    flex-wrap: wrap;
+  }
+  
+  .tab {
+    flex: 1 1 auto;
+    text-align: center;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+  }
+}
